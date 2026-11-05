@@ -1,247 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JIBIN DOMINIC | Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jibin Dominic | Full Stack Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --primary:#2563eb;
+    --dark:#0f172a;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --white:#ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background:#f8fafc;
+    color:#1e293b;
+    line-height:1.6;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+header{
+    background:linear-gradient(135deg,#2563eb,#0f172a);
+    color:white;
+    padding:100px 0;
+}
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:3rem;
+}
+
+.hero h2{
+    margin-top:10px;
+    font-weight:400;
+}
+
+.hero p{
+    max-width:800px;
+    margin-top:20px;
+}
+
+.btns{
+    margin-top:30px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    margin:5px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:white;
+    color:#2563eb;
+}
+
+.secondary{
+    border:2px solid white;
+    color:white;
+}
+
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--dark);
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.stat{
+    background:white;
+    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.stat h3{
+    color:var(--primary);
+    font-size:2rem;
+}
+
+.timeline-item{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.company{
+    color:#2563eb;
+    font-weight:600;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.project{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 12px rgba(0,0,0,.08);
+}
+
+.tags span{
+    display:inline-block;
+    background:#dbeafe;
+    color:#2563eb;
+    padding:5px 10px;
+    border-radius:20px;
+    margin:4px;
+    font-size:.85rem;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.contact a{
+    color:white;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2rem;
     }
-    .navbar {
-      background: #0d6efd;
-    }
-    .navbar-brand, .nav-link {
-      color: #fff !important;
-    }
-    .hero {
-      background: linear-gradient(to right, #0d6efd, #6610f2);
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .section-title {
-      border-left: 5px solid #0d6efd;
-      padding-left: 10px;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-    .card {
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    footer {
-      background: #0d6efd;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-    }
-    .highlight {
-      color: #0d6efd;
-      font-weight: bold;
-    }
-  </style>
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">JIBIN DOMINIC</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-              data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon bg-light"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<header>
+<div class="container hero">
 
-  <!-- Hero -->
-  <section class="hero">
-    <h1 class="display-4 fw-bold">Full Stack Developer</h1>
-    <p class="lead"><strong>Python | Django | <span class="highlight">Redis Caching</span> | Docker | AWS</strong></p>
-    <p class="h5 mt-3">6+ Years | 40K+ Job Migration | <span class="highlight">97% Faster APIs</span></p>
-    <a href="#projects" class="btn btn-light btn-lg mt-4">View Projects →</a>
-  </section>
+    <h1>Jibin Dominic</h1>
+    <h2>Full Stack Engineer | Python Developer | Angular Developer</h2>
 
-  <!-- About -->
-  <section id="about" class="container my-5">
-    <h2 class="section-title">About Me</h2>
     <p>
-      Full Stack Developer with <strong>6+ years</strong> delivering scalable automation and backend solutions 
-      using Python, Django, and FastAPI. Specialized in enterprise workload automation achieving 
-      <strong>70% cost savings</strong> through large-scale process optimization. 
-      Recently implemented <strong>Redis caching reducing API response 97% (150ms → &lt;5ms)</strong>.
+        Experienced Full Stack Engineer with 7+ years of experience building scalable web applications,
+        enterprise automation platforms, REST APIs, and cloud-native solutions.
     </p>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container my-5">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item border-0 p-2">🐍 Python, Pandas, NumPy</li>
-          <li class="list-group-item border-0 p-2"><strong>🌐 Django/DRF, FastAPI, Redis Caching</strong></li>
-          <li class="list-group-item border-0 p-2">🗄️ PostgreSQL, MySQL, Django ORM (Query Optimization)</li>
-        </ul>
-      </div>
-      <div class="col-md-6">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item border-0 p-2"><strong>🐳 AWS (EC2/S3), Docker Compose, Gunicorn</strong></li>
-          <li class="list-group-item border-0 p-2">🔗 REST APIs, Microservices, CI/CD</li>
-          <li class="list-group-item border-0 p-2">⚛️ React (Hooks), Agile/Scrum, Git</li>
-        </ul>
-      </div>
+    <div class="btns">
+        <a href="#" class="btn primary">Download Resume</a>
+        <a href="#contact" class="btn secondary">Contact Me</a>
     </div>
-  </section>
 
-  <!-- Experience -->
-  <section id="experience" class="container my-5">
-    <h2 class="section-title">Professional Experience</h2>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="card p-4">
-          <h5>Tata Consultancy Services (TCS), Bangalore</h5>
-          <p><small class="text-muted">Jan 2023 – Present</small></p>
-          <ul class="mt-2">
-            <li><strong>40,000+ batch jobs</strong> migration to IBM Z Workload Scheduler</li>
-            <li>Python automation → <strong>60% efficiency gain</strong></li>
-            <li>Reusable frameworks for enterprise scheduling</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-4">
-          <h5>Sparksupport Infotech Pvt Ltd, Kochi</h5>
-          <p><small class="text-muted">Jun 2020 – Dec 2022</small></p>
-          <ul class="mt-2">
-            <li>RESTful APIs with Django REST Framework</li>
-            <li>PostgreSQL query optimization & security</li>
-            <li>End-to-end feature delivery with frontend teams</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-4">
-          <h5>Freelance Python/Django Developer</h5>
-          <p><small class="text-muted">Jan 2020 – May 2020</small></p>
-          <ul class="mt-2">
-            <li>Full-stack Django + React applications</li>
-            <li>AWS EC2 deployments with performance tuning</li>
-            <li>Payment gateway + authentication integration</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="card p-4">
-          <h5>Software Developer – Steerforth</h5>
-          <p><small class="text-muted">Jul 2019 – Dec 2019</small></p>
-          <ul class="mt-2">
-            <li>Django web apps & MySQL schema optimization</li>
-            <li>Backend debugging & performance profiling</li>
-            <li>AWS deployments & maintenance</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+</div>
+</header>
 
-  <!-- Projects -->
-  <section id="projects" class="container my-5">
-    <h2 class="section-title">Featured Projects</h2>
-    
-    <div class="card p-4 mb-4">
-      <h5>🏭 Scheduler Migration Automation</h5>
-      <p><small class="text-muted">Mar 2024 – Jun 2025 | TCS</small></p>
-      <ul class="mt-2">
-        <li><strong>40K+ batch jobs</strong> migrated (CA7 → IBM Z) → <span class="highlight">70% cost savings</span></li>
-        <li>Python migration framework + automated validation</li>
-        <li>Comparison reports → <span class="highlight">90% effort reduction</span></li>
-      </ul>
-    </div>
-    
-    <div class="card p-4 mb-4">
-      <h5>⚡ Redis Caching - OAuth Client Portal</h5>
-      <p><small class="text-muted">Production | Docker Compose Stack</small></p>
-      <ul class="mt-2">
-        <li><span class="highlight">97% faster APIs:</span> 150ms → <strong>&lt;5ms</strong></li>
-        <li>User-specific cache keys + login race condition fix</li>
-        <li><strong>Docker:</strong> Redis + Django + PostgreSQL stack</li>
-        <li>Cache invalidation + TTL management</li>
-      </ul>
-    </div>
-  </section>
+<section>
+<div class="container">
 
-  <!-- Education -->
-  <section id="education" class="container my-5">
-    <h2 class="section-title">Education</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <h5>MCA - Master of Computer Applications</h5>
-        <p class="text-muted">Mahatma Gandhi University, Kerala</p>
-      </div>
-      <div class="col-md-6">
-        <h5>B.Sc Physics</h5>
-        <p class="text-muted">Kannur University, Kerala</p>
-      </div>
-    </div>
-  </section>
+<h2 class="section-title">Key Achievements</h2>
 
-  <!-- Awards -->
-  <section id="awards" class="container my-5">
-    <h2 class="section-title">Awards</h2>
-    <div class="card p-4">
-      <h5>🏆 Best Team Member Award</h5>
-      <p class="text-muted">Tata Consultancy Services (2025)</p>
-    </div>
-  </section>
+<div class="stats">
 
-  <!-- Contact -->
-  <section id="contact" class="container my-5">
-    <h2 class="section-title">Get In Touch</h2>
-    <div class="row">
-      <div class="col-md-6">
-        <p><strong>📧 Email:</strong><br>
-        <a href="mailto:jibinarackaparambil@gmail.com" class="text-decoration-none">jibinarackaparambil@gmail.com</a></p>
-        <p><strong>📱 Phone:</strong><br>+91 99957 80228</p>
-      </div>
-      <div class="col-md-6">
-        <p><strong>🔗 LinkedIn:</strong><br>
-        <a href="https://linkedin.com/in/jibindominic" target="_blank" class="text-decoration-none">linkedin.com/in/jibindominic</a></p>
-        <p><strong>📍 Location:</strong><br>Bangalore, India | Immediate Joiner</p>
-      </div>
-    </div>
-  </section>
+<div class="stat">
+    <h3>7+</h3>
+    <p>Years Experience</p>
+</div>
 
-  <footer>
-    <div class="container">
-      <p class="mb-1">
-        <strong>🔗</strong> 
-        <a href="https://github.com/jibindominic" target="_blank" style="color:#fff; text-decoration:none;">GitHub</a> | 
-        <a href="https://linkedin.com/in/jibindominic" target="_blank" style="color:#fff; text-decoration:none;">LinkedIn</a>
-      </p>
-      <p><strong>97% Faster APIs with Redis Caching | Docker Expert | Enterprise Python Developer</strong></p>
-      <p class="mb-0">&copy; 2025 JIBIN DOMINIC | All Rights Reserved</p>
-    </div>
-  </footer>
+<div class="stat">
+    <h3>40K+</h3>
+    <p>Batch Jobs Migrated</p>
+</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<div class="stat">
+    <h3>97%</h3>
+    <p>API Latency Reduction</p>
+</div>
+
+<div class="stat">
+    <h3>60%</h3>
+    <p>Workflow Efficiency Improvement</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+    <p>
+        I specialize in backend development using Python, Django REST Framework,
+        FastAPI, PostgreSQL, Redis, Docker, and AWS while also building responsive
+        front-end applications using Angular and modern JavaScript.
+    </p>
+
+    <br>
+
+    <p>
+        Throughout my professional journey, I have delivered enterprise-scale
+        automation solutions, optimized application performance, designed scalable
+        APIs, and worked closely with global business stakeholders.
+    </p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Technical Skills</h2>
+
+<div class="skills">
+
+<div class="card">
+    <h3>Frontend</h3>
+    <p>Angular, React, JavaScript, TypeScript, HTML5, CSS3, Bootstrap</p>
+</div>
+
+<div class="card">
+    <h3>Backend</h3>
+    <p>Python, Django, Django REST Framework, FastAPI, REST APIs</p>
+</div>
+
+<div class="card">
+    <h3>Database</h3>
+    <p>PostgreSQL, MySQL, Redis, ORM Design</p>
+</div>
+
+<div class="card">
+    <h3>Cloud & DevOps</h3>
+    <p>AWS EC2, S3, Docker, CI/CD, Nginx, Gunicorn</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Professional Experience</h2>
+
+<div class="timeline-item">
+    <h3>Systems Engineer</h3>
+    <p class="company">Tata Consultancy Services | 2023 - Present</p>
+    <ul>
+        <li>Led migration of 40,000+ batch jobs.</li>
+        <li>Built Python automation frameworks.</li>
+        <li>Improved workflow efficiency by 60%.</li>
+    </ul>
+</div>
+
+<div class="timeline-item">
+    <h3>Software Developer</h3>
+    <p class="company">SparkSupport InfoTech | 2020 - 2022</p>
+    <ul>
+        <li>Developed Angular single-page applications.</li>
+        <li>Designed Django REST APIs.</li>
+        <li>Reduced API latency by 97% through Redis caching.</li>
+    </ul>
+</div>
+
+<div class="timeline-item">
+    <h3>Freelance Web Developer</h3>
+    <p class="company">Tequevia Technologies | 2020</p>
+    <ul>
+        <li>Built custom business applications.</li>
+        <li>Managed AWS deployment infrastructure.</li>
+    </ul>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Featured Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+    <h3>Microservices E-Commerce Platform</h3>
+    <p>
+        Enterprise-grade architecture built with Django, FastAPI,
+        PostgreSQL, Redis, and Docker.
+    </p>
+
+    <div class="tags">
+        <span>Django</span>
+        <span>FastAPI</span>
+        <span>Redis</span>
+        <span>Docker</span>
+    </div>
+</div>
+
+<div class="project">
+    <h3>Enterprise Scheduler Dashboard</h3>
+    <p>
+        Monitoring and automation dashboard for enterprise scheduling systems.
+    </p>
+
+    <div class="tags">
+        <span>Python</span>
+        <span>Django</span>
+        <span>Bootstrap</span>
+    </div>
+</div>
+
+<div class="project">
+    <h3>CI/CD Deployment Platform</h3>
+    <p>
+        Automated testing, Docker build pipeline, and AWS deployment workflow.
+    </p>
+
+    <div class="tags">
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>GitHub Actions</span>
+    </div>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Education</h2>
+
+<div class="card">
+    <h3>Master of Computer Applications (MCA)</h3>
+    <p>Mahatma Gandhi University, Kerala</p>
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">Awards</h2>
+
+<div class="card">
+    <h3>🏆 Best Team Member Award</h3>
+    <p>Tata Consultancy Services (2025)</p>
+</div>
+
+</div>
+</section>
+
+<footer id="contact">
+
+<h2>Let's Connect</h2>
+
+<div class="contact">
+    <p>Email: jibinarackaparambil@gmail.com</p>
+    <p>Phone: +91 9995780228</p>
+    <p>LinkedIn: linkedin.com/in/jibindominic</p>
+    <p>Portfolio: jibinarackaparambi.github.io</p>
+</div>
+
+<br>
+<p>© 2026 Jibin Dominic. All Rights Reserved.</p>
+
+</footer>
+
 </body>
 </html>
